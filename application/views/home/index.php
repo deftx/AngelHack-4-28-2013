@@ -39,7 +39,33 @@
 </head>
 
 <body>
-
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">Simply</a>
+        <div class="nav-collapse collapse pull-right">
+          <ul class="nav">
+            <img class="pull-left profile-image" src="img/greg.jpg" height="30" width="30">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle " data-toggle="dropdown">GREGORY WONG <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">View</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </nav>
   <section id="home" class="container-fluid pages">
     <div class="dots">
       <div class="container">
@@ -68,11 +94,9 @@
         <span class="pull-right"><i class="icon-edit"></i></span>
         <h1 class="pg-title center"><span>About</span></h1>
 
-        <img id="profile-img" src="img/greg.jpg" class="img1 img-circle" alt="" />
-        <span class="pull-right"><i class="icon-edit"></i></span>
-
-        <p class="mrg20B"><strong>Shane Grace</strong> is a full time <strong>Web/Graphic designer & Illustrator</strong>. I live in <strong>Mumbai, India</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.</p>
-        <span class="pull-right"><i class="icon-edit"></i></span>
+        <a class="circle" href="#"><img id="profile-img" src="img/greg.jpg" class="img1 img-circle" alt="" /></a>
+        <p class="mrg20B">
+        <strong>Shane Grace</strong> is a full time <strong>Web/Graphic designer & Illustrator</strong>. I live in <strong>Mumbai, India</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.</p>
 
         <p><a href="javascript:void(0);" class="btn btn-styled txt16 txt-cap"><i class="icon-download-alt"></i> <strong>Download Resume</strong></a></p>                    
 
