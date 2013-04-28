@@ -1,0 +1,29 @@
+#profile-img {
+  margin: 30px;
+  margin 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.work-icon {
+  float: left;
+  margin-left: -30px;
+
+}
+#work-section {
+  padding-bottom:40px;
+}
+.work-description {
+  color: white;
+  float: left;
+  margin-left: 0;
+}
+[class^="icon-camera-retro"]:before, [class*="icon-camera-retro"]:before{
+  font-size: 60px;
+  line-height: 60px;
+  color: white;
+  text-align: leftr;
+
+}

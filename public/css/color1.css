@@ -1,0 +1,90 @@
+header.navbar {
+background:#092229;
+}
+
+.navbar .nav a.current:focus,.navbar .nav a.current,.navbar .nav a.current:hover {
+background:none;
+color:#86cd52;
+}
+
+.navbar-inverse .brand,.navbar-inverse .nav > li > a {
+color:#999;
+text-shadow:inherit;
+}
+
+.navbar-inverse .brand:hover,.navbar-inverse .nav>li>a:hover,.navbar-inverse .nav > li > a:focus,.navbar .nav a:hover {
+color:#fff;
+}
+
+h3.tags {
+background:#86cd52;
+color:#fff;
+}
+
+#about p:hover {
+color:#000;
+}
+
+#about p:hover strong {
+color:#390;
+}
+
+#logo {
+  margin-top: 40px;
+}
+
+#home {
+background:url(../img/smpier.jpg) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 690px;
+  display: block;
+}
+
+#home .dots {
+  background-image:url(../img/dot-pattern.png);
+  background-repeat: repeat;
+  position:absolute;  
+  width:100%;
+  height:768px;
+  z-index:25;
+  left: 0;
+  top: 0;
+}
+
+
+#about {
+background:#eeeee6;
+min-height:900px;
+}
+
+#work {
+background:#44454e;
+min-height:1000px;
+padding-bottom:200px;
+}
+
+#services {
+background:#dc4238;
+min-height:700px;
+}
+
+#contact {
+background:#bdca29;
+min-height:700px;
+position:relative;
+padding:0;
+}
+
+#contact .container {
+background:url(../img/dot-green.png) repeat;
+}
+
+.serv-info .circle {
+border:3px solid #fff;
+}
+
+::-moz-selection,::selection {
+background:#86CD52;
+color:#fff;
+}
