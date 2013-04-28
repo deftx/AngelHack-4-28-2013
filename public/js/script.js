@@ -13,6 +13,14 @@ if (typeof Cufon == 'function') {
 
 // Simply.me main code
 $(function() {
+	$("#skillItemList").sortable();
+	$("#skillItemList").disableSelection();
+	
+	$("#rightTip").tooltip({
+		title: "Click to directly edit content!",
+		placement: "right",
+	}).tooltip('show');
+	
 	$(".typeaheadList").each(function() {
 		var $this = $(this);
 		
@@ -25,21 +33,12 @@ $(function() {
 	
 	// Events
 	$("#btnAddTool").click(function() {
-		var listItem = $('<div>', {
-			class: 'listItemTool'
-		});
-		
-		listItem.append($("<span>", {
-			text: $("#typeaheadTools").val(),
-			class: 'toolName'
-		}));
-		
-		listItem.append($("<span>", {
-			text: $("#toolDescription").val(),
-			class: 'toolDescription'
-		}))
+		var name = $("#typeaheadTools").val();
+		var desc = $("#toolDescription").val();
+		var listItem = generate_list_item(name,desc);
 		
 		$("#listExistingTools").append(listItem);
+		newData.tiu[name] = desc;
 	})
 
 	// Clear inputs on modals
@@ -50,6 +49,14 @@ $(function() {
 		
 	})
 
+	$("#tiuModal").on('show', function() {
+		$("#listExistingTools").html('');
+		
+		$.each(sampleData.tiu, function(k,v) {
+			$("#listExistingTools").append(generate_list_item(k,v));
+		})
+	});
+	
 	$("#profile-img").hover(function() {
 		$("#profile-img-circle .icon-edit").toggle();
 	});
@@ -58,12 +65,96 @@ $(function() {
 		$("#profile-img-edit").html($("#profile-img").clone().attr('id',''));
 	})
 	
+	$(".skillItemRemove").click(function() {
+		$(this).parent().remove();
+	});
+	
+	$("#btnToolsSave").on('click', function() {
+		$("#tiuModal").modal('hide');
+		
+		$.each(newData.tiu, function(k,v) {
+			sampleData.tiu[k] = v;
+			delete newData.tiu[k];
+		})
+		
+		load_sample_data();
+	})
+	
+	$("#btnAddSkill").on('click', function() {
+		var sText = $("#typeaheadSkills").val();
+		
+		var skill = $("<div>", {
+			text: sText 
+		});
+		
+		$("#listExistingSkills").append(skill);
+		
+		$("#typeaheadSkills").val('');
+		newData.skills.push(sText)
+	})
+	
+	$("#skillsSave").on('click', function() {
+		$("#skillsModal").modal('hide');
+		
+		var template = $("#skillItemTemplate").clone().removeAttr('id').show();
+		template.find('.skillItemHeading').text($("#typeaheadSkillHeadings").val());
+		
+		$.each(newData.skills, function(k,v) {
+			if (k > 0) {
+				v = " / " + v;
+			}
+			
+			template.find('.skillItemSkills').append(v);
+		})
+		
+		$("#skillItemList").append(template);
+		
+		newData.skills = [];
+	})
+
+	$("#editModal").draggable();
+	
+	$("#editModal").on('shown', function() {
+		console.log(1)
+		$(".modal-backdrop").remove();
+	})
+	
+	$(".bgImage").click(function() {
+		var src = $(this).find('img').attr('src');
+		$("#home").css('background-image', 'url('+src+')');
+	})
+	
+	function generate_list_item(name, desc)
+	{
+		var listItem = $("#listItemTemplate").clone().removeAttr('id').show();
+
+		listItem.children('.toolName').text(name);
+		listItem.children('.toolDescription').text(desc);
+		
+		return listItem;
+	}
+	
 	function get_list(name, typeahead)
 	{
 		return $.get('/api/list/'+name, function(data) {
 			return typeahead(data);
 		})
 	}
+
+	function load_sample_data()
+	{
+		$("#tiuList").html('');
+		$.each(sampleData.tiu, function(k,v) {
+			var tool = $("#tiuTemplate").clone();
+			tool.removeAttr('id').show();
+			tool.children('.toolName').text(k);
+			tool.children('.toolDesc').text(v)
+			
+			$("#tiuList").append(tool);	
+		})
+	}
+	
+	load_sample_data();
 })
 
 // Other jQuery

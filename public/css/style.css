@@ -60,7 +60,14 @@
 [class^="icon-edit"]:before, [class*="icon-edit"]:before{
   font-size: 25px;
   line-height: 60px;
-  text-align: leftr;
+  text-align: left;
+
+}
+
+[class^="icon-plus"]:before, [class*="icon-plu"]:before{
+  font-size: 25px;
+  line-height: 60px;
+  text-align: left;
 
 }
 
@@ -101,4 +108,35 @@
 
 .toolDesc:before {
 	content: " - "
+}
+
+#skillItemList {
+	list-style-type: none;
+	margin: 0;
+}
+
+.skillItem li {
+	margin: 0;
+}
+
+#skillItemTemplate {
+	display: none;
+}
+
+#editModal {
+	left: 300px;
+	top: 15px;
+}
+
+#editModal .bgImage {
+	display: inline;
+	margin: 0 10px;
+	border: 0;
+	text-decoration: none;
+}
+
+#editModal .bgImage img {
+	width: 15%;
+	padding: 10px;
+	border: 1px solid #ccc;
 }

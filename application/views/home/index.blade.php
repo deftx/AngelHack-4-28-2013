@@ -51,10 +51,10 @@
           <ul class="nav">
             <img class="pull-left profile-image" src="img/greg.jpg" height="30" width="30">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle " data-toggle="dropdown">GREGORY WONG <b class="caret"></b></a>
+              <a class="dropdown-toggle " data-toggle="dropdown">GREGORY THOMAS <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">View</a></li>
-                <li><a href="#">Edit</a></li>
+                <li><a href="#" data-toggle="modal" role="button" data-target="#editModal">Edit</a></li>
                 <li><a href="#">Settings</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Sign Out</a></li>
@@ -65,6 +65,29 @@
       </div>
     </div>
   </nav>
+  		<div id="editModal" class="modal hide" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true" data-backdrop="static">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="editModalLabel">Edit Background</h3>
+		  </div>
+		  <div class="modal-body">
+			  <a href="#" class="bgImage">
+			  	<img src="/img/smpier.jpg">
+			  </a>
+			  <a href="#" class="bgImage">
+			  	<img src="/img/golf.jpg">
+			  </a>
+			  <a href="#" class="bgImage">
+			  	<img src="/img/test.jpg">
+			  </a>
+			  <a href="#" class="bgImage">
+			  	<img src="/img/fog.jpg">
+			  </a>
+		  </div>
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		  </div>
+		</div>
   <section id="home" class="container-fluid pages">
     <div class="dots">
       <div class="container">
@@ -72,9 +95,9 @@
      	  <div class="row pos-relative hgt700"><!-- We need fix height for this <div> because we have image in absolute position. -->
         	<div class="span8">
   		      <h1 class="txt-white mrg50T pdg50T mrg40B mob-txt-center">
-            Hi <span class="txt-yellow">I'm Greg</span>,<br />A Freelance Graphic/Web Designer<br />From Mumbai.
+            Hi <span class="txt-yellow" contenteditable>I'm Greg</span>,<br /><span contenteditable id="rightTip">I am an Engineer at UCLA<br /> from Los Angeles</span>
             </h1>
-            <p class="txt-white txt-font2 txt24 mrg20T mob-txt-center">I don't think outside of the box;<br />I think of what I can do with the box.</p>
+            <p class="txt-white txt-font2 txt24 mrg20T mob-txt-center" contenteditable>I don't think outside of the box;<br />I think of what I can do with the box.</p>
             <p class="mrg50T mob-txt-center"><a href="#work" class="btn btn-simple bg-yellow txt18 txt-font2 txt-blue">Have a look at my work <i class="icon-circle-arrow-down txt-blue"></i></a></p>
           </div><!-- span8 END -->
         </div>
@@ -95,8 +118,9 @@
         	<i class="icon-edit"></i>
         	<img id="profile-img" src="img/greg.jpg" class="img1 img-circle" alt="" />
         </div>
-        <p class="mrg20B">
-        <strong>Shane Grace</strong> is a full time <strong>Web/Graphic designer & Illustrator</strong>. I live in <strong>Mumbai, India</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.</p>
+        <p class="mrg20B" contenteditable>
+        <strong>Greg Thomas</strong> is a full time <strong>Engineer</strong>. I live in <strong>Los Angeles, CA</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.
+        </p>
 
         <p><a href="javascript:void(0);" class="btn btn-styled txt16 txt-cap"><i class="icon-download-alt"></i> <strong>Download Resume</strong></a></p>                    
       </article>
@@ -124,23 +148,46 @@
       <!-- Mid Col -->                
     	<article class="span4 offset1 mob-txt-center">
       	<h3 class="tags">My Skills</h3>
-		<span class="pull-right"><i role="button" class="icon-edit" data-toggle="modal" data-target="#skillsModal"></i></span>
-      	<p class="mrg20B">
-        	<strong class="txt16 txt-darkgrey">UX Design</strong><br />
-        	Research Plans / Prototypes / User Testing / Interaction Design / Visual Design
-        </p>
-        <p class="mrg20B">
-        	<strong class="txt16 txt-darkgrey">Development</strong><br />
-        	XHTML / HTML5 / CSS3 / WordPress Implimentation
-        </p>
-        <p class="mrg20B">
-        	<strong class="txt16 txt-darkgrey">Digital and Printing</strong><br />
-        	Logo Design / Illustration / Business Stationery / Interactive ads / Emailer / Microsites
-        </p>
-        <p class="mrg20B">
-        	<strong class="txt16 txt-darkgrey">Team/Project Management</strong><br />
-        	Lead Planning / Ability to Multi-Task / Prioritize projects / Implementation project / project Budget and Resource Allocation
-        </p>
+		<span class="pull-right">
+			<i role="button" class="icon-plus-sign" data-toggle="modal" data-target="#skillsModal"></i>
+		</span>
+		<ul id="skillItemList">
+			<li class="skillItem">
+				<p class="mrg20B">
+			        <strong class="txt16 txt-darkgrey" contenteditable>UX Design</strong><br />
+			        <span contenteditable>Research Plans / Prototypes / User Testing / Interaction Design / Visual Design</span>
+		      		<i class="pull-right icon-remove-sign skillItemRemove"></i>
+		        </p>			
+			</li>
+			<li class="skillItem">
+        		<p class="mrg20B">
+	        		<strong class="txt16 txt-darkgrey">Development</strong><br />
+	        		XHTML / HTML5 / CSS3 / WordPress Implementation
+	        		<i class="pull-right icon-remove-sign skillItemRemove"></i>
+        		</p>
+			</li>
+			<li class="skillItem">
+		        <p class="mrg20B">
+		        	<strong class="txt16 txt-darkgrey">Digital and Printing</strong><br />
+		        	Logo Design / Illustration / Business Stationery / Interactive ads / Emailer / Microsites
+		        	<i class="pull-right icon-remove-sign skillItemRemove"></i>
+		        </p>
+			</li>
+			<li class="skillItem">
+		        <p class="mrg20B">
+		        	<strong class="txt16 txt-darkgrey">Team/Project Management</strong><br />
+		        	Lead Planning / Ability to Multi-Task / Prioritize projects / Implementation project / project Budget and Resource Allocation
+		        	<i class="pull-right icon-remove-sign skillItemRemove"></i>
+		        </p>
+			</li>
+			<li class="skillItem" id="skillItemTemplate">
+				<p class="mrg20B">
+	    	    	<strong class="txt16 txt-darkgrey skillItemHeading" contenteditable></strong><br />
+	        		<span contenteditable class="skillItemSkills"></span>
+      				<i class="pull-right icon-remove-sign skillItemRemove"></i>
+        		</p>
+			</li>
+		</ul>
         <!--  Modal Begin -->
 		<div id="skillsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="skillsModalLabel" aria-hidden="true">
 		  <div class="modal-header">
@@ -150,13 +197,13 @@
 		  <div class="modal-body">
 			<div class="row-fluid">
 				<div class="span6">
-					<h4>Add a Skill</h4>
+					<h4>Enter Heading</h4>
 					<input type="text" data-list="skill_headings" id="typeaheadSkillHeadings" placeholder="Enter a skill heading.." data-provide="typeahead" class="typeaheadList typeahead" autocomplete="off">
-					<input type="text" data-list="skills" id="typeaheadSkills" placeholder="Enter a skill.." data-provide="typeahead" class="typeahead typeaheadList" autocomplete="off">
-					<button class="btn btn-primary" id="btnAddSkill">Add</button>
 				</div>
 				<div class="span4">
-					<h4>Existing Skills</h4>
+					<h4>Skills</h4>
+					<input type="text" data-list="skills" id="typeaheadSkills" placeholder="Enter a skill.." data-provide="typeahead" class="typeahead typeaheadList" autocomplete="off">
+					<button class="btn btn-primary" id="btnAddSkill">Add</button>
 					<div id="listExistingSkills">
 						
 					</div>
@@ -165,19 +212,19 @@
 		  </div>
 		  <div class="modal-footer">
 		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		    <button class="btn btn-primary">Save changes</button>
+		    <button class="btn btn-primary" id="skillsSave">Save changes</button>
 		  </div>
 		</div>
 		<!-- Modal End -->
           <!-- My Skills END -->
       	<h3 class="tags">Tools I Use</h3>
         <span class="pull-right"><i role="button" class="icon-edit" data-toggle="modal" data-target="#tiuModal"></i></span>
-		<div id="tiuList">
 	        <p id="tiuTemplate" style="display: none">
 	          <i class="icon-angle-right txt-orange"></i>
 	          <strong class="toolName txt-darkgrey">Photoshop</strong>
 	          <span class="txt12 toolDesc"> - To design website and mobile site/app</span>
 	        </p>
+        <div id="tiuList">
 		</div>
         <div id="tiuModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="tiuModalLabel" aria-hidden="true">
 		  <div class="modal-header">
@@ -192,17 +239,20 @@
 					<textarea id="toolDescription" rows="3" placeholder="Enter a description..."></textarea>
 					<button class="btn btn-primary" id="btnAddTool">Add</button>
 				</div>
-				<div class="span4">
+				<div class="span6">
 					<h4>Existing Tools</h4>
+					<div id="listItemTemplate" class="listItemTool" style="display: none">
+						<span class="toolName"></span>
+						<span class="toolDescription"></span>
+					</div>
 					<div id="listExistingTools">
-						
 					</div>
 				</div>
 			</div>
 		  </div>
 		  <div class="modal-footer">
 		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		    <button class="btn btn-primary">Save changes</button>
+		    <button class="btn btn-primary" id="btnToolsSave">Save changes</button>
 		  </div>
 		</div>
           <!-- Tools I Use END -->
@@ -254,7 +304,7 @@
           </div>
           <span class="span5 work-description pull-right">
             <h5>View Photos</h5>
-            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <p contenteditable>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
         <div class="span6 pull-right">
@@ -263,7 +313,7 @@
           </div>
           <span class="span5 work-description pull-right">
             <h5>View My Docs</h5>
-            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <p contenteditable>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
       </div>
@@ -275,7 +325,7 @@
           </div>
           <span class="span5 work-description pull-right">
             <h5>View My Diagrams</h5>
-            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <p contenteditable>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
         <div class="span6 pull-right">
@@ -284,7 +334,7 @@
           </div>
           <span class="span5 work-description pull-right">
             <h5>View My Video</h5>
-            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <p contenteditable>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
       </div>
@@ -292,16 +342,16 @@
   </section><!-- work END -->
       
   <section id="contact" class="container-fluid pages">
-  	<iframe height="700" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Thane,+Maharashtra,+India&amp;aq=0&amp;oq=thane+m&amp;sspn=38.092988,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Thane,+Maharashtra,+India&amp;t=m&amp;ll=19.233282,72.987928&amp;spn=0.02026,0.008497&amp;z=14&amp;output=embed"></iframe>
+  	<iframe height="700" src="http://maps.google.com/?ie=UTF8&amp;ll=34.068872,-118.44429&amp;spn=0.021721,0.04519&amp;t=m&amp;z=15&amp;output=embed"></iframe>
   	<div class="container">
       <div id="contactaddress">
         <h1 class="pg-title"><span>Contact</span></h1>
-        <p class="txt24 txt-font2 txt-darkgrey mrg20B">Use below details to tell me about your project goals and needs.<br>The best way to reach me is thorugh email: <a href="mailto:contact@bdslorem.com">contact@bdslorem.com</a></p>
+        <p class="txt24 txt-font2 txt-darkgrey mrg20B" contenteditable>Use below details to tell me about your project goals and needs.<br>The best way to reach me is thorugh email: <a href="mailto:contact@bdslorem.com">me@gregthomas.com</a></p>
         <h4 class="txt-orange">Address & Phone</h4>
-        <p class="txt-darkgrey">Kisan Nagar, Wagle Estate, Thane (Mumbai), Maharashtra, India.</p>
+        <p class="txt-darkgrey">Gregory Thomas, 123 A St, Los Angeles, CA</p>
         <div class="mrg20B txt16 row">
-          <div class="span6 txt-right mob-txt-center"><i class="icon-phone txt-white"></i> <a href="tel:000000000" class="txt-white"><strong>+91 0000 000 000</strong></a></div>
-          <div class="span6 txt-left mob-txt-center"><i class="icon-envelope txt-white"></i> <a href="mailto:contact@bdslorem.com" class="txt-white"><strong>contact@bdslorem.com</strong></a></div>
+          <div class="span6 txt-right mob-txt-center"><i class="icon-phone txt-white"></i> <a href="tel:000000000" class="txt-white"><strong>(310) 555-1212</strong></a></div>
+          <div class="span6 txt-left mob-txt-center"><i class="icon-envelope txt-white"></i> <a href="mailto:me@gregthomas.com" class="txt-white"><strong>me@gregthomas.com</strong></a></div>
         </div>
         <h4 class="txt-orange">Social</h4>
         <p class="social">
@@ -318,6 +368,7 @@
   </section><!-- contact END -->
 
   <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
   <script src="js/jquery.quicksand.js"></script>
@@ -326,7 +377,19 @@
   <script>document.createElement('section');var duration=1000,easing='easeInOutExpo';</script>
   <script src="js/script.js"></script>
   <script>
+    var newData = {
+		tiu: {},
+		skills: []
+    };
+    
 	var sampleData = {
+			header: {
+				name: "Hi, I'm Greg",
+				tagLine1: "I'm an engineer at UCLA",
+				tagLine2: "from Los Angeles",
+				smTagLine1: "I don't think outside of the box;",
+				smTagLine2: "I think of what I can do with the box"
+			},
 			tiu: { 
 				'Photoshop' : 'To design website and mobile site/app',
 				'Dreamweaver' : 'Edit HTML/JS',
@@ -335,19 +398,9 @@
 				'TreePad Asia' : 'To manage notes',
 				'iPhone' : 'For testing sites/apps on mobile',
 				'Producteev.com' : 'To manage projects'
-			}
-		};
-	
-	$(function() {
-		$.each(sampleData.tiu, function(k,v) {
-			var tool = $("#tiuTemplate").clone();
-			tool.removeAttr('id').show();
-			tool.children('.toolName').text(k);
-			tool.children('.toolDesc').text(v)
+			},
 			
-			$("#tiuList").append(tool);	
-		})
-	})
+		};
   </script>
 </body>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
