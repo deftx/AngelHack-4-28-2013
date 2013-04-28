@@ -66,8 +66,12 @@ $(function() {
 	})
 	
 	$(".skillItemRemove").click(function() {
-		$(this).parent().remove();
+		$(this).parents('.skillItem').remove();
 	});
+	
+	$("#addMyWork").click(function() {
+		$("#myWorkModal").modal('show');
+	})
 	
 	$("#btnToolsSave").on('click', function() {
 		$("#tiuModal").modal('hide');
@@ -108,7 +112,7 @@ $(function() {
 		})
 		
 		$("#skillItemList").append(template);
-		
+		$("#listExistingSkills").html('');
 		newData.skills = [];
 	})
 

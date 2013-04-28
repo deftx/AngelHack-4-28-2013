@@ -295,8 +295,35 @@
   </section><!-- About END -->
 	
   <section id="work" class="container-fluid pages">
+    <div id="myWorkModal" class="modal hide fade" tabindex="-1" aria-labelledby="myWorkLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="myWorkLabel">Add Work</h3>
+		  </div>
+		  <div class="modal-body">
+			  <div class="row-fluid">
+			  	<div class="span2 fileTypes">
+				  	<span class="fileType show">
+				  		<i class="icon-camera-retro"></i>
+				  	</span>
+				  	<span class="fileType hide">
+				  		<i class="icon-camera-retro"></i>
+				  	</span>
+				  	<span class="fileType hide">
+				  		<i class="icon-camera-retro"></i>
+				  	</span>
+				  	<span class="fileType hide">
+				  		<i class="icon-camera-retro"></i>
+				  	</span>
+			  	</div>
+			  </div>
+		  </div>
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		  </div>
+		</div>
   	<div class="container">
-      <h1 class="pg-title txt-yellow"><span>My Work</span></h1>
+      <h1 class="pg-title txt-yellow"><span>My Work</span> <i class="icon-plus-sign" id="addMyWork" class="pull-right"></i></h1>
       <div class="row">
         <div class="span6">
           <div class="span1 pull-left">
