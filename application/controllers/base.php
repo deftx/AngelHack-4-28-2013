@@ -1,7 +1,6 @@
 <?php
 
 class Base_Controller extends Controller {
-
 	/**
 	 * Catch-all method for requests that can't be matched.
 	 *
@@ -13,5 +12,4 @@ class Base_Controller extends Controller {
 	{
 		return Response::error('404');
 	}
-
 }
