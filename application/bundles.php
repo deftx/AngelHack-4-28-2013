@@ -34,7 +34,6 @@
 */
 
 return array(
-
-	'docs' => array('handles' => 'docs'),
-
+	'oneauth' => array('auto' => true),
+	'bundocs' => array('auto' => true, 'handles' => 'bundocs'),
 );
