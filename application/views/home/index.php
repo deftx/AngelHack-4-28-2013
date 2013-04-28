@@ -65,13 +65,21 @@
       </div>
       <div class="row">
       <article class="span4 center">
+        <span class="pull-right"><i class="icon-edit"></i></span>
         <h1 class="pg-title center"><span>About</span></h1>
+
         <img id="profile-img" src="img/greg.jpg" class="img1 img-circle" alt="" />
+        <span class="pull-right"><i class="icon-edit"></i></span>
+
         <p class="mrg20B"><strong>Shane Grace</strong> is a full time <strong>Web/Graphic designer & Illustrator</strong>. I live in <strong>Mumbai, India</strong>. Phasellus vulputate iaculis congue. Donec ultrices, leo in fermentum accumsan, dolor eros condimentum arcu pretium rutrum diam  habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas facilisis blandit ligula dictum et vitae rutrum lorem velit nec ligula. Please take a moment to review selections of my work and feel free to contact me for further information on my background, skills and experience.</p>
+        <span class="pull-right"><i class="icon-edit"></i></span>
+
         <p><a href="javascript:void(0);" class="btn btn-styled txt16 txt-cap"><i class="icon-download-alt"></i> <strong>Download Resume</strong></a></p>                    
+
       </article><!-- Mid Col -->                
     	<article class="span4 offset1 mob-txt-center">
       	<h3 class="tags">My Skills</h3>
+        <span class="pull-right"><i class="icon-edit"></i></span>
         <p class="mrg20B">
         	<strong class="txt16 txt-darkgrey">UX Design</strong><br />
         	Research Plans / Prototypes / User Testing / Interaction Design / Visual Design
@@ -90,6 +98,8 @@
         </p>
           <!-- My Skills END -->
       	<h3 class="tags">Tools I Use</h3>
+        <span class="pull-right"><i class="icon-edit"></i></span>
+
         <p>
         	<strong class="txt-darkgrey"><i class="icon-angle-right txt-orange"></i> Photoshop</strong>
           <span class="txt12"> - To design website and mobile site/app</span>
@@ -123,6 +133,7 @@
 
     	<article class="span3 mob-txt-center">
       	<h3 class="tags">Experience</h3>
+        <span class="pull-right"><i class="icon-edit"></i></span>
         <p class="mrg20B">
         	<strong class="txt-darkgrey txt16">Freelance</strong><br />
             <strong class="txt16">2009- Current</strong><br />
@@ -137,20 +148,19 @@
         	<strong class="txt-darkgrey txt16">Attixx Core Pvt. Ltd.</strong><br />
             <strong class="txt16">2004- 2007 | Web Designer</strong><br />
             <span>Job description quia dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
-        </p>
-          
-          
+        </p>    
       	<h3 class="tags">Awards</h3>
-          <p class="mrg20B">
-              <span class="txt-orange">Site of the Month (BSCD Site)</span><br />
-              <a href="javascript:void(0);">abcexpyr.com</a> - Jun 2012<br />
-              <span class="txt12">Peor dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
-          </p>
-          <p>
-              <span class="txt-orange">Best UI Design (RHWA Site)</span><br />
-              <a href="javascript:void(0);">opqrswrd.com</a> - Oct 2012<br />
-              <span class="txt12">Dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
-          </p>
+        <span class="pull-right"><i class="icon-edit"></i></span>
+        <p class="mrg20B">
+            <span class="txt-orange">Site of the Month (BSCD Site)</span><br />
+            <a href="javascript:void(0);">abcexpyr.com</a> - Jun 2012<br />
+            <span class="txt12">Peor dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
+        </p>
+        <p>
+            <span class="txt-orange">Best UI Design (RHWA Site)</span><br />
+            <a href="javascript:void(0);">opqrswrd.com</a> - Oct 2012<br />
+            <span class="txt12">Dolor sit porro quisquam est qui consectetur adipisci velit dolorem ipsum amet.</span>
+        </p>
         </article><!-- Right Col -->
       </div><!-- row END -->
     </div><!-- container END -->
@@ -165,15 +175,17 @@
             <i class="icon-camera-retro"></i>
           </div>
           <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <h5>View Photos</h5>
+            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
         <div class="span6 pull-right">
           <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
+            <i class="icon-file-alt"></i>
           </div>
           <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <h5>View My Docs</h5>
+            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
       </div>
@@ -181,128 +193,26 @@
       <div class="row">
         <div class="span6">
           <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
+            <i class="icon-lightbulb"></i>
           </div>
           <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <h5>View My Diagrams</h5>
+            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
         <div class="span6 pull-right">
           <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
+            <i class="icon-facetime-video"></i>
           </div>
           <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span6">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-        <div class="span6 pull-right">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span6">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-        <div class="span6 pull-right">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="span6">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-        <div class="span6 pull-right">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span6">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          </span>
-        </div>
-        <div class="span6 pull-right">
-          <div class="span1 pull-left">
-            <i class="icon-camera-retro"></i>
-          </div>
-          <span class="span5 work-description pull-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <h5>View My Video</h5>
+            <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </span>
         </div>
       </div>
     </div>
   </section><!-- work END -->
       
-  <section id="services" class="container-fluid pages">
-  	<div class="container">
-      <h1 class="pg-title txt-yellow"><span>Services</span></h1> 
-      <div class="row serv-info">
-        <article class="span3 serv-col txt-center txt-white">
-          <div class="circle"><i class="icon-magic"></i></div>
-          <p class="txt-font2 txt24 txt-cap">Designing</p>
-          <p class="opacity70">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </article>
-        
-        <article class="span3 serv-col txt-center txt-white">
-          <div class="circle"><i class="icon-desktop"></i></div>
-          <p class="txt-font2 txt24 txt-cap">PSD TO HTML</p>
-          <p class="opacity70">Consectetur adipisicing ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaquis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Ut enim ad minim veniam, ex ea.</p>
-        </article>
-        
-        <article class="span3 serv-col txt-center txt-white">
-          <div class="circle"><i class="icon-leaf"></i></div>
-          <p class="txt-font2 txt24 txt-cap">Illustration</p>
-          <p class="opacity70">Sed do eiusmod tempor incididunt ut sectetur adipisicing ipsum dolor sit amet labore et dolore magna aliquaquis nostrud exercitation ullamco enim ad minim veniam ex ea laboris nisi ut aliquip commodo consequat.</p>
-        </article>
-        
-        <article class="span3 serv-col txt-center txt-white">
-          <div class="circle"><i class="icon-gift"></i></div>
-          <p class="txt-font2 txt24 txt-cap">WordPress</p>
-          <p class="opacity70">Tectetur adipisicing ipsum dolor sit amet labore et dolore magna aliquaquis nostrud exercitation ullamco enim ad minim veniam ex ea laboris nisi ut aliquip commodo consequat eiusmod tempor incididunt ut.</p>
-        </article>
-      </div>
-    </div>
-  </section><!-- services END -->
-
   <section id="contact" class="container-fluid pages">
   	<iframe height="700" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Thane,+Maharashtra,+India&amp;aq=0&amp;oq=thane+m&amp;sspn=38.092988,56.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Thane,+Maharashtra,+India&amp;t=m&amp;ll=19.233282,72.987928&amp;spn=0.02026,0.008497&amp;z=14&amp;output=embed"></iframe>
   	<div class="container">

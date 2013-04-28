@@ -20,10 +20,46 @@
   float: left;
   margin-left: 0;
 }
-[class^="icon-camera-retro"]:before, [class*="icon-camera-retro"]:before{
+[class^="icon-camera-retro"]:before, [class*="icon-camera-retro"]:before, [class*="icon-file-alt"]:before{
+  margin-top:20px;
   font-size: 60px;
   line-height: 60px;
   color: white;
+  text-align: leftr;
+
+}
+
+[class^="icon-file-alt"]:before, [class*="icon-file-alt"]:before{
+  font-size: 80px;
+  line-height: 60px;
+  color: white;
+  margin-top: 20px;
+  text-align: leftr;
+
+}
+
+
+[class^="icon-file-alt"]:before, [class*="icon-lightbulb"]:before{
+  font-size: 80px;
+  line-height: 60px;
+  color: white;
+  margin-top: 20px;
+  text-align: leftr;
+
+}
+
+[class^="icon-file-alt"]:before, [class*="icon-facetime-video"]:before{
+  font-size: 55px;
+  line-height: 60px;
+  color: white;
+  margin-top: 20px;
+  text-align: leftr;
+
+}
+
+[class^="icon-edit"]:before, [class*="icon-edit"]:before{
+  font-size: 25px;
+  line-height: 60px;
   text-align: leftr;
 
 }
