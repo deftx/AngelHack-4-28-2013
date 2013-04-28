@@ -81,6 +81,11 @@ Route::filter('before', function()
 Route::filter('after', function($response)
 {
 	// Do stuff after every request to your application...
+	$route = Request::route();
+	
+	if ($route->controller == "api") {
+		Config::set('application.profiler', false);
+	}
 });
 
 Route::filter('csrf', function()

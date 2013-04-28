@@ -11,6 +11,62 @@ if (typeof Cufon == 'function') {
 	Cufon.replace('h1, h2, h3, h4, h5, h6');
 }
 
+// Simply.me main code
+$(function() {
+	$(".typeaheadList").each(function() {
+		var $this = $(this);
+		
+		$(this).typeahead({
+			source: function(query, typeahead) {
+				return get_list($this.data('list'), typeahead)
+			}
+		});
+	})
+	
+	// Events
+	$("#btnAddTool").click(function() {
+		var listItem = $('<div>', {
+			class: 'listItemTool'
+		});
+		
+		listItem.append($("<span>", {
+			text: $("#typeaheadTools").val(),
+			class: 'toolName'
+		}));
+		
+		listItem.append($("<span>", {
+			text: $("#toolDescription").val(),
+			class: 'toolDescription'
+		}))
+		
+		$("#listExistingTools").append(listItem);
+	})
+
+	// Clear inputs on modals
+	$(".modal").on('show', function() {
+		$("input, textarea").each(function(k,v) {
+			$(v).val('');
+		})
+		
+	})
+
+	$("#profile-img").hover(function() {
+		$("#profile-img-circle .icon-edit").toggle();
+	});
+	
+	$("#profileImageModal").on('show', function() {
+		$("#profile-img-edit").html($("#profile-img").clone().attr('id',''));
+	})
+	
+	function get_list(name, typeahead)
+	{
+		return $.get('/api/list/'+name, function(data) {
+			return typeahead(data);
+		})
+	}
+})
+
+// Other jQuery
 $(document)
 		.ready(
 				function() {

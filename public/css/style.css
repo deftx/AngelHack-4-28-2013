@@ -63,3 +63,42 @@
   text-align: leftr;
 
 }
+
+.popoverEdit {
+	display: none;
+}
+
+.listItemTool .toolName {
+	font-weight: bold;
+}
+
+.listItemTool .toolDescription:before {
+	content: " - "
+}
+
+.modal-body {
+	overflow-y: visible;
+}
+
+#profile-img-circle {
+	position: relative;
+}
+
+#profile-img-circle .icon-edit {
+	position: absolute;
+	top: 40%;
+	left: 45%;
+	margin: 0 auto;
+}
+
+#profile-img:hover {
+	opacity: 0.5;
+}
+
+#profile-img-circle .icon-edit {
+	display: none;
+}
+
+.toolDesc:before {
+	content: " - "
+}
